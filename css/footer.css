@@ -58,7 +58,6 @@
     font-size: 14px;
   }
 }
-/* @media (max-width: 479.98px) { */
 @media (max-width: 600px) {
   .footer {
     padding-top: 15px;
