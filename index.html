@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EcoCabins</title>
+    <title data-tr="title_head">EcoCabins</title>
     <link rel="shortcut icon" href="./img/favicon-v1.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/styles.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -22,21 +22,42 @@
                 <nav class="menu__body">
                   <ul class="menu__list">
                     <li class="menu__item u-hover">
-                      <a href="#" class="menu__link">Modellen</a>
+                      <a href="#" data-tr="tr_header_menu1" class="menu__link"
+                        >Modellen</a
+                      >
                     </li>
                     <li class="menu__item u-hover">
-                      <a href="#" class="menu__link">Kopen</a>
+                      <a href="#" data-tr="tr_header_menu2" class="menu__link"
+                        >Kopen</a
+                      >
                     </li>
                     <li class="menu__item u-hover">
-                      <a href="#" class="menu__link">Huren</a>
+                      <a href="#" data-tr="tr_header_menu3" class="menu__link"
+                        >Huren</a
+                      >
                     </li>
                     <li class="menu__item u-hover">
-                      <a href="#" class="menu__link">Nieuws</a>
+                      <a href="#" data-tr="tr_header_menu4" class="menu__link"
+                        >Nieuws</a
+                      >
                     </li>
                   </ul>
                 </nav>
               </div>
-              <a href="#" class="header__button button">Contact</a>
+              <a
+                href="#"
+                data-tr="tr_header_button"
+                class="header__button button"
+                >Contact</a
+              >
+              <form class="header__language">
+                <select id="lng-select" onchange="switchLanguage()">
+                  <option value="nl">nl</option>
+                  <option value="en">en</option>
+                  <option value="uk">uk</option>
+                </select>
+              </form>
+
               <button class="icon-menu">
                 <span></span>
               </button>
@@ -48,14 +69,18 @@
         <section class="page__hero hero">
           <div class="hero__wrapper">
             <div class="hero__main">
-              <h1 class="hero__title">Duurzame tiny huisjes</h1>
-              <div class="hero__text title">
+              <h1 data-tr="tr_hero_title" class="hero__title">
+                Duurzame tiny huisjes
+              </h1>
+              <div data-tr="tr_hero_text" class="hero__text title">
                 Een ecologisch tiny huisje is zoveel mogelijk opgebouwd uit
                 duurzame natuurlijke materialen
               </div>
             </div>
             <div class="hero__video">
-              <a href="#popup-video" class="popup-link">Bekijk de film</a>
+              <a href="#popup-video" data-tr="tr_hero_video" class="popup-link"
+                >Bekijk de film</a
+              >
             </div>
             <div class="hero__social">
               <div
@@ -74,14 +99,16 @@
             <div class="popup__body">
               <div class="popup__content">
                 <a href="#" class="popup__close close-popup _icon-close"></a>
-                <div class="popup__title">Duurzame tiny huisjes</div>
+                <div data-tr="tr_hero_title" class="popup__title">
+                  Duurzame tiny huisjes
+                </div>
                 <div class="popup__video">
                   <video width="100%" height="auto" controls>
                     <source
                       src="./img/hero/Eco-cabins-video.mp4"
                       type="video/mp4"
                     />
-                    Ваш браузер не поддерживает воспроизведение видео.
+                    Your browser does not support video playback.
                   </video>
                 </div>
               </div>
@@ -93,10 +120,16 @@
             <div class="materials__container">
               <div class="materials__content content-materials">
                 <div class="content-materials__body">
-                  <h2 class="content-materials__title title">
+                  <h2
+                    data-tr="tr_content-materials_title"
+                    class="content-materials__title title"
+                  >
                     Duurzame materialen
                   </h2>
-                  <div class="content-materials__text">
+                  <div
+                    data-tr="tr_content-materials_text"
+                    class="content-materials__text"
+                  >
                     Alle EcoCabins hebben een hoge isolatiewaarde, worden
                     geproduceerd met indien mogelijk duurzame en/of natuurlijke
                     materialen en hebben als opvallende uiterlijke kenmerk de
@@ -105,7 +138,10 @@
                     legio: hout is licht, flexibel, isoleert goed en bouwt snel
                     en efficiënt.
                   </div>
-                  <a href="#" class="content-materials__button button"
+                  <a
+                    href="#"
+                    data-tr="tr_content-materials_button"
+                    class="content-materials__button button"
                     >Lees meer</a
                   >
                 </div>
@@ -137,15 +173,17 @@
         </section>
         <section class="page__innovation innovation">
           <div class="innovation__container">
-            <h2 class="innovation__title title">Innovatie</h2>
-            <p class="innovation__text">
+            <h2 data-tr="tr_innovation_title" class="innovation__title title">
+              Innovatie
+            </h2>
+            <p data-tr="tr_innovation_text1" class="innovation__text">
               Wij hebben als doel om de EcoCabins voortdurend verder te
               ontwikkelen en innoveren, zodat de EcoCabins uiteindelijk 100%
               duurzaam en circulair zijn. Voorwaarde hierbij is dat de EcoCabins
               betaalbaar blijven. Met behulp van de zon, de wind en de beste
               isolatie geniet u van.
             </p>
-            <p class="innovation__text">
+            <p data-tr="tr_innovation_text2" class="innovation__text">
               Alle EcoCabins hebben een hoge isolatiewaarde, worden geproduceerd
               met indien mogelijk duurzame en/of natuurlijke materialen en
               hebben als opvallende uiterlijke kenmerk de ‘ronde hoeken’,
@@ -162,22 +200,28 @@
             <div class="advantages__content">
               <div class="advantages__column">
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Hout</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title1" class="advantages__title">
+                    Hout
+                  </h2>
+                  <p data-tr="tr_advantages_text1" class="advantages__text">
                     De draagconstructies van EcoCabins bestaan uit hout. Hout is
                     duurzaam en.
                   </p>
                 </div>
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Afwerking</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title3" class="advantages__title">
+                    Afwerking
+                  </h2>
+                  <p data-tr="tr_advantages_text3" class="advantages__text">
                     De draagconstructies van EcoCabins bestaan uit hout. Hout is
                     duurzaam en.
                   </p>
                 </div>
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Stalen onderstel</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title5" class="advantages__title">
+                    Stalen onderstel
+                  </h2>
+                  <p data-tr="tr_advantages_text5" class="advantages__text">
                     Het stalen onderstel is sterk zijn en heeft de benodigde
                     stijfheid die
                   </p>
@@ -185,22 +229,28 @@
               </div>
               <div class="advantages__column">
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Glaswol isolatie</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title2" class="advantages__title">
+                    Glaswol isolatie
+                  </h2>
+                  <p data-tr="tr_advantages_text2" class="advantages__text">
                     De combinatie van glaswol met een houtskelet constructie
                     geeft een.
                   </p>
                 </div>
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Triple glas</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title4" class="advantages__title">
+                    Triple glas
+                  </h2>
+                  <p data-tr="tr_advantages_text4" class="advantages__text">
                     De combinatie van glaswol met een houtskelet constructie
                     geeft een.
                   </p>
                 </div>
                 <div class="advantages__block">
-                  <h2 class="advantages__title">Infrarood vloer</h2>
-                  <p class="advantages__text">
+                  <h2 data-tr="tr_advantages_title6" class="advantages__title">
+                    Infrarood vloer
+                  </h2>
+                  <p data-tr="tr_advantages_text6" class="advantages__text">
                     De vloer wordt opgewarmd middels opgewekte warmte uit eigen
                     zonne-energie.
                   </p>
@@ -220,8 +270,18 @@
           </a>
           <div class="footer__social"></div>
           <div class="footer__other">
-            <a href="#" class="footer__cookies u-hover">Cookies</a>
-            <a href="#" class="footer__privacy u-hover">Privacybeleid</a>
+            <a
+              href="#"
+              data-tr="tr_footer_cookies"
+              class="footer__cookies u-hover"
+              >Cookies</a
+            >
+            <a
+              href="#"
+              data-tr="tr_footer_privacy"
+              class="footer__privacy u-hover"
+              >Privacybeleid</a
+            >
           </div>
         </div>
       </footer>

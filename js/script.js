@@ -237,3 +237,33 @@ document.addEventListener("keydown", function (e) {
       Element.prototype.msMatchesSelector
   }
 })()
+
+// ---------- translation (localization) ---------------
+// code for page translation
+let languageData
+
+fetch("languages.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error("Network response was not ok")
+    }
+    return response.json()
+  })
+  .then((data) => {
+    languageData = data
+    switchLanguage()
+  })
+  .catch((error) => {
+    console.error("Fetch error:", error)
+  })
+
+function switchLanguage() {
+  const selectElement = document.getElementById("lng-select")
+  const selectedLanguage = selectElement.value
+
+  const elementsWithDataAttr = document.querySelectorAll("[data-tr]")
+  elementsWithDataAttr.forEach((element) => {
+    const dataAttr = element.getAttribute("data-tr")
+    element.textContent = languageData[selectedLanguage][dataAttr]
+  })
+}
