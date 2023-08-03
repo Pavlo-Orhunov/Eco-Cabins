@@ -242,7 +242,7 @@ document.addEventListener("keydown", function (e) {
 // code for page translation
 let languageData
 
-fetch("languages.json")
+fetch("../languages.json")
   .then((response) => {
     if (!response.ok) {
       throw new Error("Network response was not ok")
