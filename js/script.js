@@ -160,6 +160,14 @@ function popupClose(popupActive, doUnlock = true) {
       })
     }
 
+    const iframes = popupActive.querySelectorAll("iframe")
+    iframes.forEach((iframe) => {
+      const src = iframe.getAttribute("src")
+      if (src.includes("youtube.com") || src.includes("player.vimeo.com")) {
+        iframe.src = src
+      }
+    })
+
     popupActive.classList.remove("open")
     if (doUnlock) {
       bodyUnLock()

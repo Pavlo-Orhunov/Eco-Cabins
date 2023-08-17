@@ -5,6 +5,13 @@
 * Browsers: > 0.4% and not dead
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: > 0.4% and not dead
+*/
+
 /*======= Fonts =======*/
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Rubik:wght@400;500&display=swap");
 
@@ -996,11 +1003,11 @@ body {
     gap: 30px;
   }
   .advantages__image {
-    grid-area: 2 / 1 / 3 / 2;
+    order: 2;
   }
   .advantages__content {
     min-height: auto;
-    grid-area: 1 / 1 / 2 / 2;
+    order: 1;
   }
   .advantages__column {
     margin-left: 0;
