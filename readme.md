@@ -2,6 +2,18 @@
 
 ## Responsive design, hamburger, resizable header, popup, floating elements, slider
 
-Link to the web-page:
+**_LAYOUT FEATURES:_**
 
-<https://pavlo-orhunov.github.io/Eco-Cabins/>
+- layout made on Figma
+- HTML using BEM methodology
+- fully responsive layout up to 320px width
+- no use of any preprocessors and assemblers (manual work)
+- hamburger menu on mobile devices
+- decreasing header when scrolling
+- popup window with embedded video
+- Swiper slider
+- preloader
+- fullscreen hero section on resolution below 991.98px
+
+`Link to the Page`
+https://pavlo-orhunov.github.io/Eco-Cabins/

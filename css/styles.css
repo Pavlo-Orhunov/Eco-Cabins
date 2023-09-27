@@ -5,20 +5,12 @@
 * Browsers: > 0.4% and not dead
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: > 0.4% and not dead
-*/
-
 /*======= Fonts =======*/
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Rubik:wght@400;500&display=swap");
 
 /*======= icon-Fonts =======*/
 @import url("../fonts/iconsfont.css");
 
-/*======= Root variables =======*/
 :root {
   /* colors */
   --greys-light-grey: #646d70;
@@ -101,33 +93,6 @@ h5,
 h6 {
   font-size: inherit;
   font-weight: inherit;
-}
-
-/*======== Body styles ========*/
-body {
-  font-family: Poppins, Tahoma, sans-serif;
-  font-size: 12px;
-  color: var(--greys-white, #ffffff);
-  font-family: Rubik, sans-serif;
-}
-/* Blocks body scrolling */
-.body--lock {
-  overflow: hidden;
-}
-.wrapper {
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-.wrapper > main {
-  flex: 1 1 auto;
-}
-[class*="__container"] {
-  max-width: 830px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 /*======= Common styles =======*/
@@ -633,6 +598,44 @@ body {
   }
 }
 
+/*--------------------*/
+body {
+  font-family: Poppins, Tahoma, sans-serif;
+  font-size: 12px;
+  color: var(--greys-white, #ffffff);
+  font-family: Rubik, sans-serif;
+}
+/* Blocks body scrolling when hamburger menu is active */
+.body--lock {
+  overflow: hidden;
+}
+/*--------------------*/
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+[class*="__container"] {
+  max-width: 830px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--greys-light-grey, #646d70);
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
 /*======= Main page styles =======*/
 .page__hero {
 }
@@ -660,8 +663,10 @@ body {
       url("../img/hero/hero.jpg") center / cover no-repeat, rgb(100, 109, 112);
   }
 }
+
 .hero__wrapper {
   position: relative;
+  width: 100%;
   max-width: 940px;
   margin: 0 auto;
   padding-left: 15px;
@@ -743,16 +748,13 @@ body {
     height: 25px;
   }
 }
-._icon-instagram {
-}
-._icon-facebook {
-}
-._icon-twitter {
-}
+
 @media (max-width: 991.98px) {
   .hero {
     padding-top: 130px;
     padding-bottom: 130px;
+    min-height: 100vh;
+    display: flex;
   }
   .hero__main {
     padding-left: 0;
@@ -773,7 +775,7 @@ body {
 @media (max-width: 600px) {
   .hero__video {
     position: absolute;
-    bottom: -65px;
+    bottom: -3em;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 10px;
@@ -999,15 +1001,14 @@ body {
   .advantages__container {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    grid-auto-flow: row-reverse;
     gap: 30px;
   }
   .advantages__image {
-    order: 2;
+    grid-area: 2 / 1 / 3 / 2;
   }
   .advantages__content {
     min-height: auto;
-    order: 1;
+    grid-area: 1 / 1 / 2 / 2;
   }
   .advantages__column {
     margin-left: 0;

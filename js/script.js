@@ -21,6 +21,18 @@ function windowLoad() {
   }
 }
 
+// ------------- Preloader -------------
+document.addEventListener("DOMContentLoaded", function () {
+  var preloader = document.getElementById("preloader")
+  setTimeout(function () {
+    preloader.style.opacity = "0"
+  }, 500)
+  preloader.addEventListener("transitionend", function () {
+    preloader.style.display = "none"
+  })
+})
+// ------------- END OF Preloader -------------
+
 // ------------- hamburger menu -------------
 const iconMenu = document.querySelector(".icon-menu")
 const menuBody = document.querySelector(".menu__body")
@@ -31,6 +43,7 @@ if (iconMenu) {
     menuBody.classList.toggle("_active")
   })
 }
+// ------------- END OF hamburger menu -------------
 
 // ------------- shrinking header on scroll -------------
 // Get the header element
@@ -55,13 +68,13 @@ if (headerElement) {
 } else {
   console.error("Header element not found.")
 }
+// ------------- END OF shrinking header on scroll -------------
 
 // ------------- Moving Elements -------------
-// Get all elements with an attribute data-original-container
-const elementsToMove = document.querySelectorAll("[data-original-container]")
-
-// Function to move elements based on attributes data-original-container,data-target-container and data-max-width
+// Function to move elements based on attributes data-original-container, data-target-container, and data-max-width
 function moveElements() {
+  const elementsToMove = document.querySelectorAll("[data-original-container]")
+
   elementsToMove.forEach((element) => {
     const originalContainerName = element.getAttribute(
       "data-original-container"
@@ -88,7 +101,7 @@ function moveElements() {
         }
       }
     } else {
-      // If the data-target-container attribute is not specified, leave the element on its place
+      // If the data-target-container attribute is not specified, leave the element in its place
       console.warn(
         `Warning: data-target-container attribute is missing for the element with data-original-container="${originalContainerName}".`
       )
@@ -96,11 +109,10 @@ function moveElements() {
   })
 }
 
-// Call the function on a window resize
-window.addEventListener("load", () => {
-  moveElements()
-  window.addEventListener("resize", moveElements)
-})
+// Call the function on DOMContentLoaded and window resize
+document.addEventListener("DOMContentLoaded", moveElements)
+window.addEventListener("resize", moveElements)
+// ------------- END OF Moving Elements -------------
 
 // ------------- Popup windows -------------
 // Define variables
@@ -221,9 +233,7 @@ document.addEventListener("keydown", function (e) {
   }
 })
 ;(function () {
-  // проверяем поддержку
   if (!Element.prototype.closest) {
-    // реализуем
     Element.prototype.closest = function (css) {
       var node = this
       while (node) {
@@ -235,9 +245,7 @@ document.addEventListener("keydown", function (e) {
   }
 })()
 ;(function () {
-  // проверяем поддержку
   if (!Element.prototype.matches) {
-    // определяем свойство
     Element.prototype.matches =
       Element.prototype.matchesSelector ||
       Element.prototype.webkitMatchesSelector ||
@@ -245,9 +253,9 @@ document.addEventListener("keydown", function (e) {
       Element.prototype.msMatchesSelector
   }
 })()
+// ------------- END OF Popup windows -------------
 
 // ---------- translation (localization) ---------------
-// code for page translation
 let languageData
 
 fetch("languages.json")
@@ -275,3 +283,4 @@ function switchLanguage() {
     element.textContent = languageData[selectedLanguage][dataAttr]
   })
 }
+// ---------- END OF translation (localization) ---------------
