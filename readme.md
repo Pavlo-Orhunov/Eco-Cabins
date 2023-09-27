@@ -17,3 +17,15 @@
 
 `Link to the Page`
 https://pavlo-orhunov.github.io/Eco-Cabins/
+
+<br>
+
+**_Preview for desktop layout version:_**
+
+![Desktop version preview](https://github.com/Pavlo-Orhunov/Eco-Cabins/blob/master/img/PC-view.jpg "Desktop version preview")
+
+<br>
+
+**_Preview for mobile layout version:_**
+
+![Mobile version preview](https://github.com/Pavlo-Orhunov/Eco-Cabins/blob/master/img/mobile-view.jpg "Mobile version preview")
