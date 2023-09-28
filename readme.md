@@ -13,7 +13,8 @@
 - popup window with embedded video
 - Swiper slider
 - preloader
-- fullscreen hero section on resolution below 991.98px
+- fullscreen hero section on a resolution below 991.98px
+- translation to 3 languages without reloading through .json file
 
 `Link to the Page`
 https://pavlo-orhunov.github.io/Eco-Cabins/
