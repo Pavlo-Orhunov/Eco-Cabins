@@ -7,6 +7,9 @@ function windowLoad() {
     const swiper = new Swiper(".materials__slider", {
       speed: 500,
       loop: true,
+      autoplay: {
+        delay: 3000,
+      },
       spaceBetween: 10,
       breakpoints: {
         600: {
