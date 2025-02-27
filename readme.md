@@ -1,4 +1,4 @@
-# Designed based on a template provided by Evhen Andrikanych. HTML CSS JS FIGMA"
+# Designed based on a template provided by Yevhen Andrikanych. HTML CSS JS FIGMA"
 
 ## Responsive design, hamburger, resizable header, popup, floating elements, slider
 
